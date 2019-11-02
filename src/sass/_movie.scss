@@ -1,0 +1,262 @@
+/***********************************************************************************
+    REACT MOVIE
+***********************************************************************************/
+
+.movie{
+    background-color: $background-theme-color;
+    color: $theme-color-dark;
+    line-height: 25px;
+
+    .project-opening{
+        @include correct-vh;
+
+        .banner{     
+            img{
+                @include center-abs-position;
+                z-index: 2;
+            }
+        }
+
+        .banner::after{
+            content: "REACT MAZZY MOVIE";
+            @include banner;
+        }
+        
+        @include scroll-down-arrow;
+    }
+
+    @include visit-website;
+
+    .detail-wrap{
+        padding: 120px 5vw 0 5vw;
+
+        h1, h2, h3, h4, h5{
+            text-align: center;
+        }
+
+        .short-intro{
+            margin-bottom: 30px;
+
+            h1{
+                font-size: 2.3em;
+                margin-bottom: 0;
+                line-height: 35px;
+            }
+
+            p{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            small{
+                height: 4px;
+                margin: 0 auto;
+                @include line;
+            }
+
+            small:nth-of-type(1){
+                width: 80px;
+                background-color: $theme-color-dark;
+            }
+
+            small:nth-of-type(2){
+                margin-top: 10px;
+                width: 60px;
+                background-color: $theme-color-light;
+            }
+        
+        }
+
+        .description-wrap{
+            text-align: center;
+
+            .des-right{
+
+                .highline{
+                    font-weight: 600;
+                }
+
+                a{
+                    color: $theme-color-dark;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+
+            .des-left{
+
+                .tools{
+                    margin-top: 20px;
+                    span{
+                        @include tools;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include work-nav;
+}
+
+/***********************************************************************************
+    Media Queries
+***********************************************************************************/
+@media only screen and (min-width: 367px){
+    .movie{
+        .detail-wrap{
+            .work-process{
+                .ia{
+                    h3::after{
+                        width: 330px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 400px){
+    .movie{
+
+        .project-opening{
+
+            .banner::after{
+                font-size: 7em;
+                line-height: 180px;
+            }
+        }
+    }     
+}
+
+@media only screen and (min-width: 500px){
+    .movie{
+
+        .project-opening{
+
+            .banner{
+                img{
+                    max-width: 80%;
+                }
+            }
+
+            .banner::after{
+                font-size: 8em;
+                line-height: 200px;
+            }
+        }
+
+        .detail-wrap{
+
+            .short-intro{
+                h1{
+                    font-size: 2.5em;
+                }
+            }
+
+            p{
+                font-size: 1.05em;
+                line-height: 27px;
+            }
+
+            .tools{
+                span{
+                    font-size: 1.05em;
+                }
+            }
+
+            .visit-website{
+                a{
+                    font-size: 1.2em;
+                }
+
+                span{
+                    font-size: 1.05em;
+                }
+            }
+        }
+    }     
+}
+
+@media only screen and (min-width: 800px){
+    .movie{
+
+        .project-opening{
+
+            .banner{
+                img{
+                    max-width: 60%;
+                }
+            }
+
+            .banner::after{
+                font-size: 9em;
+                line-height: 200px;
+            }
+        }
+
+        .detail-wrap{
+            padding: 120px 15vw 0 15vw;
+
+            .tools{
+                width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }     
+}
+
+@media only screen and (min-width: 1000px){
+    .movie{
+
+        .project-opening{
+
+            .banner{
+                img{
+                    max-width: 50%;
+                }
+            }
+
+            .banner::after{
+                font-size: 8em;
+                line-height: 0;
+                width: 120%;
+            }
+        }
+
+        .short-intro{
+            p{
+                width: 400px;
+                margin: 30px auto;
+            }
+        }
+
+        .detail-wrap{
+
+            .description-wrap{
+                background-color: $info-background-color;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 0.75fr 1fr;
+                border: 1px solid #fdf7e5;
+                grid-gap: 30px;
+                text-align: start;
+    
+                .des-left{
+                    border-right: 2px solid rgba(0, 0, 0, 0.26);
+                    padding-top: 20px;
+    
+
+                    .tools{
+                        width: 100%;
+                        text-align: left;
+                        margin-top: 0;
+                    } 
+
+                    .visit-website{
+                        text-align: left;
+                    }
+                }
+            }            
+        }
+    }     
+}

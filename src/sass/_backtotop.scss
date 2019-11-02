@@ -1,0 +1,28 @@
+.backtop{
+  position: fixed;
+  bottom: 55px;
+  right: 25px;
+  display: none;
+  cursor: pointer;
+  color: $theme-color-dark;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover{
+    span{
+      color: $theme-color-light;
+    }
+  }
+
+  span{
+    margin: 0;
+    display: block;
+    line-height: 15px;
+  }
+}
+
+@media (min-width: 500px){
+  .backtop{
+    bottom: 35px;
+  }
+}

@@ -1,0 +1,82 @@
+/***********************************************************************************
+  OPENING SECTION ON ABOUT PAGE
+***********************************************************************************/
+
+.about{
+  background-color: $background-theme-color;  
+  overflow: hidden;
+
+  main{
+    .hello{
+      @include correct-vh;
+
+      div{
+        @include center-abs-position;
+
+        .greet{
+          @include bradley-hand;
+          font-size: 1.8em;
+          width: 100%;
+          position: absolute;
+          top: -20px;
+          right: -100px;
+        }
+
+        h1{
+          margin: 0;
+          font-family:'Trebuchet MS';
+          font-size: 3em;
+          line-height: 40px;
+        }
+      }
+
+      // Scroll down animation and styles
+      @include scroll-down-anchor;
+
+    }  
+  } 
+}
+
+/***********************************************************************************
+    Media Queries
+***********************************************************************************/
+
+@media only screen and (min-width: 500px){
+  .about{
+    main{
+      .hello{
+        div{
+          .greet{
+            font-size: 2.1em;
+          }
+    
+          h1{
+            font-size: 3.3em;
+            line-height: 43px;
+          }
+        }   
+      } 
+    }
+  } 
+}
+
+@media only screen and (min-width: 700px){
+  .about{
+    main{
+      .hello{
+        div{
+          .greet{
+            font-size: 2em;
+            top: -25px;
+            right: -120px;
+          }
+    
+          h1{
+            font-size: 4em;
+            line-height: 50px;
+          }
+        }   
+      } 
+    }
+  } 
+}

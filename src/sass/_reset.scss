@@ -1,0 +1,43 @@
+/* ******************************
+    Images - Max-Width Reset
+****************************** */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ******************************
+        Box Sizing Reset
+****************************** */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Asap', sans-serif;
+    scroll-behavior: smooth;
+    color: #262626;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ******************************
+        Reset Max Width
+****************************** */
+
+.master-wrap{
+    max-width: 1280px;
+    overflow: hidden;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
+
+/* ******************************
+        Global styles
+****************************** */
+
+.highline{
+    color: #F28B0E;
+}

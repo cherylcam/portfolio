@@ -1,0 +1,366 @@
+/***********************************************************************************
+    ABOUT CHERYLCAM / INTRO & CONTACT
+***********************************************************************************/
+.about{
+    padding: 0 4vw;
+
+    .master-wrap {
+        padding-bottom: 0;
+    }
+
+    p{
+        line-height: 25px;
+    }
+
+    .intro{
+        padding-top: 130px;
+
+        .biography{
+            margin-top: 40px;
+
+            .xinchao{
+                text-align: center;
+                margin-bottom: 5px;
+
+                b{
+                    font-size: 1.3em;
+                }
+            }
+
+            .pronounce{
+                font-style: italic;
+                font-size: 0.9em;
+                display: block;
+                text-align: center;
+            }          
+        }
+
+        .tools-kit{
+            text-align: center;
+            display: grid;
+            grid-gap: 20px;
+            padding-bottom: 40px;
+            width: 280px;
+            margin: 0 auto;
+
+            h2{
+                display: block;
+                text-align: center;
+                font-size: 1.7em;
+                margin: 15px 0;
+            }
+
+            h2::after{
+                @include line;
+                width: 160px;
+                height: 3px;
+                background-color: $theme-color-light;
+                margin: 0 auto;
+            }
+
+            h3{
+                font-size: 1.3em;
+                font-weight: 700;
+            }
+
+            span{
+                display: inline-block;
+                padding: 2px;
+                margin: 7px;
+            }
+
+            .development-tools{
+                h3{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .links{
+            margin: 70px 0;
+            text-align: center;
+
+            a{
+                text-decoration: none;
+                padding: 7px;
+                margin: 0 10px;
+                font-weight: 600;
+                width: 100px;
+                height: 40px;
+                font-size: 1.1em;
+                color: #fff;
+                border: 2px solid #262626;
+                border-radius: 20px;
+                background-image: -webkit-linear-gradient(30deg, #262626 50%, transparent 50%);
+                background-image: linear-gradient(30deg, #262626 50%, transparent 50%);
+                background-size: 500px;
+                background-repeat: no-repeat;
+                background-position: 0%;
+                -webkit-transition: background 300ms ease-in-out;
+                transition: background 300ms ease-in-out;
+            }
+
+            a:hover{
+                background-position: 100%;
+                color: #262626;
+        
+                span{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .contact{
+        height: 100vh;
+        position: relative;
+
+        .contact-content{
+            @include center-abs-position;
+            width: 100%;
+            text-align: center; 
+
+            .contact-mobile{
+                font-family: 'Trebuchet MS';
+                font-size: 2.3em;
+            }
+
+            .contact-desktop{
+                display: none;
+            }
+            
+            a{
+                display: block;
+                text-decoration: none;
+                color: $theme-color-dark;
+                margin: 0 20vw;
+                font-weight: 600;
+                margin-top: 20px;
+
+                span:first-child{
+                    border-bottom: 1.5px solid $theme-color-light;
+                }
+
+                span:nth-child(2){
+                    display: none;
+                    color: $theme-color-light;
+                }
+            }
+
+            a:hover{
+                span:first-child{
+                    display: none;
+                }
+                
+                span:nth-child(2){
+                    display: block;
+                }
+            }
+
+            .email{
+                margin-top: 40px;
+            }
+
+        }
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+/***********************************************************************************
+    Media Queries
+***********************************************************************************/
+
+@media only screen and (min-width: 500px){
+
+    .about{
+        padding: 0 5vw;
+
+        p{
+            font-size: 1.05em;
+            line-height: 27px;
+        }
+    
+        .intro{
+    
+            h1{
+                font-size: 2.5em;
+            }
+    
+            small:nth-of-type(1){
+                width: 200px;
+            }
+    
+            small:nth-of-type(2){
+                width: 110px;
+            }
+
+            .links{
+                a{
+                    padding: 12px;
+                }
+            }
+    
+            .tools-kit{
+    
+                h3{
+                    font-size: 1.5em;
+                    font-weight: 700;
+                }
+    
+                span{
+                    font-size: 1.05em;
+                }
+            }
+        }
+
+        .contact{
+            .contact-content{
+                h2{
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .about{
+        padding: 0 10vw;
+        .intro{
+            .biography{
+                .brief-intro{
+                    text-align: center;
+                }
+
+                .long-intro{
+                    -webkit-column-count: 2;
+                    column-count: 2;
+                    -webkit-column-gap: 2.5em;
+                    column-gap: 2.5em;
+                    margin-top: 25px;
+                    column-rule: 2px solid rgba(242, 139, 14, 0.37);
+
+                    p:nth-of-type(1){
+                        margin-top: 0;
+                    }
+                }
+                
+            }
+
+            .links{
+                margin-top: 90px;
+                margin-bottom: 45px;
+
+
+                a{
+                    margin: 0 50px;
+                }
+
+            }
+
+            .tools-contact-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10vw;
+
+                .tools-kit{
+                    text-align: end;
+                    margin: 0;
+                    justify-self: end;
+                    width: 100%;
+                    padding-top: 60px;
+
+                    h2{
+                        text-align: end;
+                        font-size: 2em;
+                        margin: 20px 0;
+                    }
+
+                    h2::after{
+                        width: 100px;
+                        margin-left: calc(100% - 100px);
+                    }
+
+                    h3{
+                        font-size: 1.2em;
+                        margin: 0;
+                    }
+
+                    span{
+                        margin: 5px 0 0 10px;
+                        border-bottom: none;
+                    }
+                }
+
+                .contact{
+                    height: 100%;
+                    padding-top: 60px;
+
+                    .contact-content{
+                        position: static;
+                        transform: translate(0, 0);
+                        text-align: start; 
+                        
+                        p{
+                            margin: 13px 0;
+                        }
+
+                        h2{
+                            display: none;
+                        }
+    
+                        .contact-desktop{
+                            display: block;
+                            font-size: 2em;
+                            margin: 20px 0 36px 0;
+                        }
+
+                        .contact-desktop::after{
+                            @include line;
+                            width: 100px;
+                            height: 3px;
+                            background-color: $theme-color-light;
+                        }
+
+                        a{
+                            margin: 0;
+                            margin-top: 5.9px;
+                            
+                            span{
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        footer{
+            display: block;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .about{
+        .intro{
+
+            .tools-contact-wrap{
+                .tools-kit{
+                    width: 350px;
+
+                }
+
+                .contact{
+                    width: 350px;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+/***********************************************************************************
+    HEADER
+***********************************************************************************/
+
+header{
+  .contact-wrap{
+    display: none;
+  }
+}
+
+.logo-wrap{
+  z-index: 999;
+  position: fixed;
+  left: 15px;
+  padding-top: 20px;
+  text-align: center; 
+
+  svg{
+    width: 67px;
+  }
+
+  img{
+    width: 67px;
+  }
+
+  #light-logo{
+    display: none;
+  }
+}
+
+/***********************************************************************************
+    Media Queries
+***********************************************************************************/
+
+@media only screen and (min-width: 700px){
+  
+  header{
+    .contact-wrap{
+      display: block;
+      position: fixed;
+      width: 90px;
+      height: 90px;
+      left: -25px;
+      top: 65px;
+      transform: translate(50%, -50%);
+      z-index: 9999;
+  
+      a{
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        z-index: 9999;
+        svg{
+          width: 30px;
+          height: 30px;
+          border: 1px solid white;
+          position: fixed; 
+        }
+      }
+      
+      .github{
+        svg{
+          top: 30px;
+          left: 30px;
+        }
+        .svg-fill{
+          stroke-width: 0;
+        }
+      }
+  
+      .linkedin{
+        svg{
+          top: 60px;
+        }
+        .svg-fill{
+          stroke-width: 0;
+        }
+      }
+  
+      a::before{
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        content: '';
+        opacity: 0;
+        transition: background-color .8s, top .5s, left .5s, opacity .5s;
+      }
+  
+      a:hover::before{
+        opacity: 1;
+        background: $theme-color-light;
+      }
+
+      .mail::before{
+        top: 15px;
+        left: 15px;
+      }
+
+      .mail:hover::before{
+        top: 3px;
+        left: 3px;
+      }
+
+      .github::before{
+        top: 45px;
+        left: 45px;
+      }
+
+      .github:hover::before{
+        top: 33px;
+        left: 33px;
+      }
+
+      .linkedin::before{
+        top: 78px;
+        left: 18px;
+      }
+
+      .linkedin:hover::before{
+        top: 63px;
+        left: 3px;
+      }
+    } 
+  }
+
+  .logo-wrap{
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    img{
+      width: 66px;
+    }
+  }
+}

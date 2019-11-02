@@ -1,0 +1,367 @@
+/***********************************************************************************
+  WORK PAGE
+***********************************************************************************/
+
+.work{
+  background-color: $background-theme-color;
+  overflow: hidden;
+
+  main{
+    width: 100vw;
+
+    .page-intro{
+      @include correct-vh;
+      text-align: center;
+
+      .work-intro-wrap{
+        @include center-abs-position;
+        width: 100%;
+
+        .greet{
+          @include bradley-hand;
+          font-size: 1.8em;
+          width: 100%;
+          position: absolute;
+          top: -30px;
+          right: -50px;
+        }
+  
+        h1{
+          margin: 0 auto;
+          font-family:'Trebuchet MS';
+          font-size: 3em;
+          line-height: 40px;
+        }
+  
+        p{
+          font-size: 1em;
+          color: $text-color-light-grey;
+          text-align: center;
+        }
+      }
+
+      // Scroll down animation and styles
+      @include scroll-down-anchor;
+    }
+
+    .project-wrap{
+      padding: 140px 7vw 0 7vw;
+      margin: 0 auto;
+      margin-bottom: 150px;
+      max-width: 1280px;
+
+      .keep-scroll{
+        position: fixed;
+        font-size: .8em;
+        bottom: 50px;
+        left: 7vw;
+        height: 15px;
+        line-height: 1;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+        color: rgba(242, 139, 14, 0.37);
+        text-align: end;
+        display: none;
+      }
+
+      .keep-scroll::before{
+        content: "";
+        width: 1px;
+        height: 25px;
+        background: rgba(0, 0, 0, 0.37);
+        border-radius: 5px;
+        display: block;
+        position: absolute;
+        left: -105px;
+        right: 0;
+        margin: auto;
+        bottom: 18px;
+      }
+
+      .project{
+        position: relative;
+        margin-bottom: 70px;
+
+        .image-anchor-wrap{
+          position: relative;
+
+          /* Blur + gray scale when hover image */
+          figure{
+            position: relative;
+            margin: 0;
+
+            img{
+              background-color: $info-background-color;
+              -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+              -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.473);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.473);
+              -webkit-filter: grayscale(0) blur(0);
+              filter: grayscale(0) blur(0);
+              -webkit-transition: .1s ease-in-out;
+              transition: .1s ease-in-out;
+            }
+
+            .view-detail{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-decoration: none;
+              height: 50px;
+              width: 110px;
+              line-height: 45px;
+              font-weight: 700;
+              border: 2px solid white;
+              border-radius: 5px;
+              background-color: rgba(0, 0, 0, 0.363);
+              text-align: center;
+              color: $text-color-home;
+              visibility: hidden;
+            }
+          }
+
+          figure:hover{
+            img{
+              -webkit-filter: grayscale(100%) blur(2px);
+            filter: grayscale(100%) blur(2px);
+            }
+            .view-detail{
+              visibility: visible;
+            }
+          }
+
+          /* Shine when hover image */
+          figure::after{
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: -30%;
+            z-index: 1;
+            display: block;
+            content: '';
+            width: 20%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.123) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.123) 100%);
+            -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+          }
+
+          figure:hover::after {
+            -webkit-animation: shine 0.6s;
+            animation: shine 0.6s;
+            visibility: hidden;
+          }
+
+          @keyframes shine {
+            100% {
+              left: 95%;
+              visibility: visible;
+            }
+          }
+        }
+
+        .project-content{
+          display: grid;
+          grid-template-columns: 1fr 75px;
+          width: calc(100vw - 14vw);
+          z-index: 9;
+
+          .project-intro{
+            h3{
+              margin: 5px 0; 
+              font-size: 1.5em;
+            }
+          }
+
+          a{
+            margin: auto 0;
+            height: 28px;
+            border-radius: 5px;
+            background-color: $theme-color-dark;
+            text-align: center;
+            color: $text-color-home;
+            text-decoration: none;
+
+            #{$link-hover-selector}{
+              background-color: $theme-color-light;
+            }
+
+            b{
+              line-height: 28px;
+            }
+          }
+        }
+        p{
+          margin: 0;
+          color: $text-color-light-grey;
+        }
+      }
+    }
+  }
+}
+
+/***********************************************************************************
+    Media Queries
+***********************************************************************************/
+
+@media only screen and (min-width: 500px){
+  .work{
+    main{
+      .page-intro{
+        .work-intro-wrap{
+          .greet{
+            font-size: 2.1em;
+            right: -60px;
+          }
+    
+          h1{
+            font-size: 3.3em;
+            line-height: 43px;
+          }
+        }
+      }
+
+      .project-wrap{
+        .keep-scroll{
+          bottom: 25px;
+        }
+
+        .project{
+          margin-bottom: 150px;
+
+          .project-content{
+            bottom: -23px;
+            grid-template-columns: 1fr 95px;
+
+            .project-intro{
+              h3{
+                font-size: 2.3em;
+              }
+            }
+
+            a{
+              font-size: 1.2em;
+              height: 40px;
+
+              b{
+                line-height: 40px;
+              }
+            }
+          }
+
+          p{
+            font-size: 1.2em;
+            bottom: -43px;
+          }
+
+          .image-anchor-wrap{
+            figure{
+              .view-detail{
+                font-size: 1.2em;
+                height: 60px;
+                width: 120px;
+                line-height: 55px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 860px){
+  .work{
+    main{
+      .page-intro{
+        .work-intro-wrap{
+          .greet{
+            font-size: 2em;
+            top: -30px;
+            right: -90px;
+          }
+    
+          h1{
+            font-size: 4em;
+            line-height: 50px;
+          }
+
+          p{
+            display: none;
+          }
+        }
+      }
+      .project-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 80px;
+        padding: 140px 80px 0 80px;
+
+
+        .project{
+          margin-bottom: 0;
+
+          .project-content{
+            width: 100%;
+
+            .project-intro{
+              h3{
+                font-size: 1.5em;
+              }
+            }
+
+            a{
+              height: 30px;
+
+              b{
+                line-height: 30px;
+              }
+            }
+          }
+        }
+        
+        section:nth-of-type(even){
+          margin-top: 100px; 
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .work{
+    main{
+      .project-wrap{
+        .project{
+          .project-content{
+            .project-intro{
+              h3{
+                font-size: 2.2em;
+              }
+            }
+
+            a{
+              font-size: 1.1em;
+              height: 35px;
+
+              b{
+                line-height: 35px;
+              }
+            }
+          }
+
+          p{
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+aside.ScrollUpButton__Container.ScrollUpButton__Toggled{
+  background-color: transparent;
+}

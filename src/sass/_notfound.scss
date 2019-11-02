@@ -1,0 +1,27 @@
+/***********************************************************************************
+    NOT FOUND PAGE
+***********************************************************************************/
+
+.notfound{
+    @include correct-vh;
+    background-image: $background-theme-color;
+
+    h1{
+        @include center-abs-position;
+        text-align: center;
+        color: $theme-color-dark;
+        z-index: 2;
+    }
+
+}
+
+.notfound::after{
+    content: "404";
+    color: $theme-color-light;
+    font-size: 15em;
+    font-weight: 700;
+    z-index: 1;
+    opacity: .5;
+    text-align: center;
+    @include center-abs-position;
+}

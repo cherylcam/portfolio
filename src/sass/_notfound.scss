@@ -4,7 +4,7 @@
 
 .notfound{
     @include correct-vh;
-    background-image: $background-theme-color;
+    background-color: $background-theme-color;
 
     h1{
         @include center-abs-position;

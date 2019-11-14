@@ -6,7 +6,7 @@ import BackToTop            from '../components/BackToTop';
 import '../css/styles.css';
 
 
-class Movie extends Component{
+class News extends Component{
 
   componentDidMount () {
     require("../scripts/fade-up.js");
@@ -18,15 +18,15 @@ class Movie extends Component{
 
   render(){
     return (
-        <div className="movie">
+        <div className="news">
           <div className="master-wrap">
           <Logo/>
           <section className="project-opening">
             <div className="banner">
             <picture>
-              <source media="(min-width: 900px)" srcSet="./images/projects/react-movie/banner.png"></source>
-              <source media="(min-width: 700px)" srcSet="./images/projects/react-movie/banner-1000.png"></source>
-              <img data-src="./images/projects/react-movie/banner-800.png" alt="React Movie Banner" src="./images/projects/react-movie/banner-800.png"></img>
+              <source media="(min-width: 900px)" srcSet="./images/projects/react-news/banner.png"></source>
+              <source media="(min-width: 700px)" srcSet="./images/projects/react-news/banner-1000.png"></source>
+              <img data-src="./images/projects/react-news/banner-800.png" alt="React news Banner" src="./images/projects/react-news/banner-800.png"></img>
             </picture>
             </div>
             <div className="scroll-down">
@@ -37,8 +37,8 @@ class Movie extends Component{
           <main>
             <section className="detail-wrap" id="detail">
               <section className="short-intro" data-aos="fade-up">
-                <h1><span className="highline">MAZZY</span> MOVIE</h1>
-                <p>A movie feed web application created with React.</p>
+                <h1><span className="highline">CTC</span> NEWS</h1>
+                <p>A news feed web application created with React.</p>
                 <small></small>
                 <small></small>
               </section>
@@ -54,7 +54,7 @@ class Movie extends Component{
                   </div>
 
                   <div className="visit-website">
-                    <a href="https://mazzymovie.cherylcam.com/"
+                    <a href="https://ctcnews.cherylcam.com/"
                       target="_blank"
                       rel="noreferrer noopener"
                       aria-label="Click to visit live website">
@@ -63,11 +63,11 @@ class Movie extends Component{
                 </div>
                 
                 <div className="des-right">
-                <p>Mazzy Movie is a Movie Database website application that was 
-                  created using React. The site is cross-browser compatible and 
-                  fully responsive. It also allows users to browse movies by 
-                  categories in multiple pages. Moreover, the site includes 
-                  a short description and rating for every movie.
+                <p>CTC News is a website application that was 
+                  built with React, fetching data from <a href="https://newsapi.org/" target="_blank">News APIs</a>. 
+                  The site is cross-browser compatible and 
+                  fully responsive. It displays the latest news in the world in a visually appealing way. 
+                  Also, cookie is set for the search bar for better user-experience.
                 </p>
                 </div>
               </section>
@@ -75,9 +75,8 @@ class Movie extends Component{
           </main>
 
           <section className="work-nav">
-            <a href="/cheryl-guitars" aria-label="Previous Project"><span>&lsaquo;</span> GUITARS</a>
+            <a href="/movie" aria-label="Previous Project"><span>&lsaquo;</span> MAZZY</a>
             <a href="/work" aria-label="Back to Work Page">- BACK -</a>
-            <a href="/news" aria-label="Next Project">CTC NEWS <span>&rsaquo;</span></a>
             <span></span>
           </section>
 
@@ -89,4 +88,4 @@ class Movie extends Component{
   };
 }
 
-export default Movie;
+export default News;

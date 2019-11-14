@@ -13,6 +13,7 @@ import Guitars      from "./projects/CherylGuitars";
 import OAT          from "./projects/OAT";
 import Portfolio    from "./projects/Portfolio";
 import Movie  from "./projects/Movie";
+import News  from "./projects/News";
 
 class App extends Component {
 
@@ -84,6 +85,7 @@ class App extends Component {
        <Route exact path="/oat" component={OAT} />
        <Route exact path="/portfolio" component={Portfolio} />
        <Route exact path="/movie" component={Movie} />
+       <Route exact path="/news" component={News} />
 
        {/* Shows an error page. */}
        <Route path="*" component={NotFound} />

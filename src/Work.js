@@ -144,7 +144,7 @@ class Work extends Component{
             </div> 
             <p>A fictional business brochure</p>
           </section>
-          <section className="project js-game" data-aos="fade-left">
+          <section className="project movie" data-aos="fade-left">
             <div className="image-anchor-wrap">
               <a href="/movie" aria-label="Click to see detail">
                 <figure>
@@ -171,7 +171,36 @@ class Work extends Component{
                 <b>View Live</b>
               </a>
             </div> 
-            <p>React Movie Database</p>
+            <p>React Movie API</p>
+          </section>
+          <section className="project news" data-aos="fade-left">
+            <div className="image-anchor-wrap">
+              <a href="/news" aria-label="Click to see detail">
+                <figure>
+                  <picture>
+                    <source media="(min-width: 1000px)" srcSet="/images/projects/react-news/banner-1000.png"></source>
+                    <source media="(min-width: 860px)" srcSet="/images/projects/react-news/banner-700.png"></source>
+                    <source media="(min-width: 700px)" srcSet="/images/projects/react-news/banner-1000.png"></source>
+                    <source media="(min-width: 600px)" srcSet="/images/projects/react-news/banner-900.png"></source>
+                    <source media="(min-width: 400px)" srcSet="/images/projects/react-news/banner-700.png"></source>
+                    <img data-src="/images/projects/react-news/banner-500.png " alt="React Mazzy News | Cheryl Cam Portfolio" src="/images/projects/react-news/banner-500.png"></img>
+                  </picture>
+                  <span className="view-detail">View Detail</span>
+                </figure>
+              </a>
+            </div>
+            <div className="project-content">
+              <div className="project-intro">
+                <h3>CTC NEWS</h3>
+              </div>
+              <a href="https://ctcnews.cherylcam.com/"
+                 target="_blank"
+                 rel="noreferrer noopener"
+                 aria-label="Click to view live website">
+                <b>View Live</b>
+              </a>
+            </div> 
+            <p>React News API</p>
           </section>
         </div>
       </main> 
